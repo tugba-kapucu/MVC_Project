@@ -1,0 +1,28 @@
+﻿@model string
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <div>
+        <hgroup>
+            <h1>Hata</h1>
+            @if (ViewBag.Message == null)
+            {
+                <h2>@Model</h2>
+            }
+            else
+            {
+                <h2>@ViewBag.Message</h2>
+            }
+        </hgroup>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿@model Category
+
+@{
+    ViewBag.Title = "Kategori Detayları";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Kategori</legend>
+
+    <div class="display-label">
+        Kategori Adı : @Model.CategoryName
+    </div>
+    <div class="display-label">
+       Açıklama : @Model.Description
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id=Model.CategoryID }) |
+    @Html.ActionLink("Listeye Geri Dön!", "Index")
+</p>
